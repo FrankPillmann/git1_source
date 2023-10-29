@@ -1,0 +1,6 @@
+baseURL = 'https://github.com/FrankPillmann/git1.git'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "shadocs"
+publishDir = "docs"
+

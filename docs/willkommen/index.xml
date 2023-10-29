@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Willkommen on My New Hugo Site</title>
+    <link>https://example.org/willkommen/</link>
+    <description>Recent content in Willkommen on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Oct 2023 09:04:53 +0100</lastBuildDate><atom:link href="https://example.org/willkommen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Willkommen</title>
+      <link>https://example.org/willkommen/willkommen/</link>
+      <pubDate>Sun, 29 Oct 2023 09:04:53 +0100</pubDate>
+      
+      <guid>https://example.org/willkommen/willkommen/</guid>
+      <description>Auf diesen Seiten finden Sie Informationen zu klinischen und organisatorischen Themen. Außerdem können Sie gezielt auf Dokumente zugreifen, die sich auf dem Netzlaufwerk U: befinden.
+Zur Suche können Sie das Inhaltsverzeichnis auf der rechten Seite benutzen oder einen Begriff in das Suchfeld eingeben.
+Über das Druckersymbol können Sie sich einzelne Seiten ausdrucken (am besten über &amp;ldquo;Weitere Einstellungen&amp;rdquo; skalieren).
+@@.my-intralean-class Dieses Wiki ersetzt nicht die gelenkten Dokumente im Intralean sondern ergänzt sie.</description>
+    </item>
+    
+  </channel>
+</rss>

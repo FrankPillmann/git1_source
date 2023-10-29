@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="generator" content="Hugo 0.119.0">
+<meta name="viewport" content="width=device-width, initial-scale=1" /><title>Entlassbrief_abschnitte | My New Hugo Site</title>
+
+<link
+  rel="icon"
+  href="/images/favicon.png"
+  type="image/x-icon"
+/>
+<link
+    rel="stylesheet"
+    rel="preload"
+    type="text/css"
+    href="/css/main.css"
+  /><link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/external/fontawesome.all.min.css"
+    /><link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/external/overlay-scrollbars/overlayscrollbars.min.css"
+    />
+</head>
+  <body onload="browserCompatibility()"><div id="navbarInfo" class="is-hidden modal-container">
+  <div class="modal-content-box modal-text-box">
+    <div class="card modal-title is-radiusless">
+      <div class="card-header">
+        <p class="card-header-title is-marginless">About</p>
+      </div>
+    </div>
+    <div class="modal-content-container">
+      <div class="modal-content-block is-block">
+</div>
+    </div>
+  </div>
+</div>
+<div id="navbarShortcuts" class="is-hidden modal-container">
+  <div class="modal-content-box modal-text-box"><div class="card modal-title is-radiusless">
+        <div class="card-header">
+          <p class="card-header-title is-marginless">Keyboard shortcuts</p>
+        </div>
+      </div>
+      <div class="modal-content-container">
+        <div class="modal-content-block"><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>q</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Show current page QR code</p>
+  </div><div class="modal-content"><kbd>Escape</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Close modals</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>i</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Show website information</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>k</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Show shortcuts</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>h</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Go to homepage</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>f</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Find on website</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>m</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Collapse/Uncollapse sidebar</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>t</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Collapse/Uncollapse table of contents</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>↑</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Go to the top of the page</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>↓</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Go to the bottom of the page</p>
+  </div><div class="modal-content"><kbd>Shift</kbd><p>+</p><kbd>p</kbd></div>
+  <div class="modal-content">
+    <p class="has-text-weight-normal">Print current page</p>
+  </div></div>
+      </div></div>
+</div>
+<div id="modalContainer" class="is-hidden modal-container">
+  <div id="modal" class="modal-content-box"></div>
+</div>
+<nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+  <div id="navbarItemsContainer" class="navbar-brand"><div id="globalLogoContainer" class="is-flex">
+  <a
+    id="globalLogo"
+    class="navbar-item navbar-item-standard is-paddingless"
+    href="/"
+  >
+    <img
+      alt="Homepage"
+      src="/images/logo.png"
+    />
+  </a>
+  <a
+    id="globalTouchLogo"
+    class="navbar-item navbar-item-standard is-paddingless"
+    href="/"
+  >
+    <img
+      alt="Homepage"
+      src="/images/logoTouch.png"
+    />
+  </a>
+</div>
+<div id="navbarItems" class="is-flex">
+      <div id="navbarItemsStart" class="is-flex">
+        <div id="searchContainer" class="navbar-item"><div class="control has-icons-left">
+  <span id="searchInput" class="autocomplete">
+    <input
+      id="search"
+      autocomplete="off"
+      class="input"
+      type="search"
+      placeholder="Search"
+    />
+  </span>
+  <span class="icon is-left">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </span>
+  <ul id="searchList" class="is-paddingless is-hidden"></ul>
+</div>
+</div>
+      </div>
+      <div id="navbarItemsEnd" class="is-flex is-invisible"><div class="navbar-item">
+  <a
+    id="printButton"
+    class="button navbar-item-standard"
+  >
+    <span class="icon-text">Print</span>
+    <span class="icon">
+      <i class="fa-solid fa-print fa-lg"></i>
+    </span>
+  </a>
+</div>
+<div class="navbar-item">
+  <a
+    id="qrCodeButton"
+    class="button navbar-item-standard"
+  >
+    <span class="icon-text">QR code</span>
+    <span class="icon">
+      <i class="fa-solid fa-qrcode fa-lg"></i>
+    </span>
+  </a>
+</div>
+<div class="navbar-item">
+  <a
+    id="shortcutsInfo"
+    trigger="navbarShortcuts"
+    class="button navbar-item-standard navbar-trigger"
+    title="Keyboard shortcuts"
+  >
+    <span class="icon-text">Shortcuts</span>
+    <span class="icon">
+      <i class="fa-solid fa-keyboard fa-lg"></i>
+    </span>
+  </a>
+</div><div class="navbar-item">
+  <a
+    id="siteInfo"
+    trigger="navbarInfo"
+    class="button navbar-item-standard navbar-trigger"
+    title="About"
+  >
+    <span class="icon-text">About</span>
+    <span class="icon">
+      <i class="fa-solid fa-circle-question fa-lg"></i>
+    </span>
+  </a>
+</div>
+<div id="navbarExtend" class="navbar-item">
+  <div id="navbarExtendWrapper">
+    <a id="navbarExtendButton" class="button navbar-item-standard">
+      <span class="icon">
+        <i class="fa-solid fa-ellipsis fa-lg"></i>
+      </span>
+    </a>
+    <div id="navbarExtendItemsContainer">
+      <div id="navbarExtendItemsWrapper"><div class="navbar-item">
+  <a
+    id="printButtonExtend"
+    class="button navbar-item-standard"
+  >
+    <span class="icon-text">Print</span>
+    <span class="icon">
+      <i class="fa-solid fa-print fa-lg"></i>
+    </span>
+  </a>
+</div>
+<div class="navbar-item">
+  <a
+    id="qrCodeButtonExtend"
+    class="button navbar-item-standard"
+  >
+    <span class="icon-text">QR code</span>
+    <span class="icon">
+      <i class="fa-solid fa-qrcode fa-lg"></i>
+    </span>
+  </a>
+</div>
+<div class="navbar-item">
+  <a
+    id="shortcutsInfoExtend"
+    trigger="navbarShortcuts"
+    class="button navbar-item-standard navbar-trigger"
+    title="Keyboard shortcuts"
+  >
+    <span class="icon-text">Shortcuts</span>
+    <span class="icon">
+      <i class="fa-solid fa-keyboard fa-lg"></i>
+    </span>
+  </a>
+</div><div class="navbar-item">
+  <a
+    id="siteInfoExtend"
+    trigger="navbarInfo"
+    class="button navbar-item-standard navbar-trigger"
+    title="About"
+  >
+    <span class="icon-text">About</span>
+    <span class="icon">
+      <i class="fa-solid fa-circle-question fa-lg"></i>
+    </span>
+  </a>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+    </div>
+  </div>
+</nav>
+<div id="navbarOverlay"></div>
+<div
+      class="columns is-mobile is-paddingless is-marginless"
+      id="mainContainer"
+    ><div
+  id="sidebarContainer"
+  class="column is-narrow is-paddingless is-marginless"
+>
+  <div id="sidebarWrapper" class="is-fixed">
+    <div id="sidebar" class="is-marginless">
+      <aside class="menu is-paddingless is-marginless">
+        <ul class="menu-list is-marginless is-paddingless"><div class="card is-fs-expandable-icon"><div class="card-header">
+      <a
+        href='/willkommen/'
+        class='card-header-title'>
+        <i class='&lt;nil&gt; fa-lg'></i></a></div>
+      </div><div class="is-expandable">
+      <div class="is-sidebar-list-wrapper"><li class="is-marginless is-entries-expandable is-entries-shrinked"><div
+            class="card"><div class="card-header">
+      <a
+        href='/willkommen/'
+        class='card-header-title'
+          title='Willkommen'>
+        <i class='&lt;nil&gt; fa-lg'></i><p class="pt-0 pb-0 pr-2 pl-1">Willkommen</p></a><a class="card-header-icon is-icon-expandable is-paddingless is-icon-shrinked">
+                <span class='icon'></span>
+              </a>
+            </div>
+          </div><ul class="is-marginless"><div class="">
+      <div class=""><li class="is-marginless"><div
+            class="card"><div class="card-header is-single-link">
+      <a
+        href='/willkommen/willkommen/'
+        class='card-header-title'
+          title='Willkommen'>
+        <i class=''></i><p class="pt-0 pb-0 pr-2 pl-0">Willkommen</p></a></div>
+          </div></li>
+      </div>
+    </div></ul></li>
+      </div>
+    </div><div class="card is-fs-expandable-icon is-sidebar-active"><div class="card-header">
+      <a
+        href='/behandlungsdokumentation/'
+        class='card-header-title'>
+        <i class='&lt;nil&gt; fa-lg'></i></a></div>
+      </div><div class="is-expandable">
+      <div class="is-sidebar-list-wrapper"><li class="is-marginless is-tree-active is-entries-expandable is-entries-expanded"><div
+            class="card"><div class="card-header">
+      <a
+        href='/behandlungsdokumentation/'
+        class='card-header-title'
+          title='Behandlungsdokumentation'>
+        <i class='&lt;nil&gt; fa-lg'></i><p class="pt-0 pb-0 pr-2 pl-1">Behandlungsdokumentation</p></a><a class="card-header-icon is-icon-expandable is-paddingless is-icon-expanded">
+                <span class='icon'></span>
+              </a>
+            </div>
+          </div><ul class="is-marginless is-tree-active"><div class="">
+      <div class=""><li class="is-marginless"><div
+            class="card is-sidebar-active"id='sidebarActiveEntry'><div class="card-header is-single-link">
+      <a
+        href='/behandlungsdokumentation/entlassbrief_abschnitte/'
+        class='card-header-title'
+          title='Entlassbrief_abschnitte'>
+        <i class=''></i><p class="pt-0 pb-0 pr-2 pl-0">Entlassbrief_abschnitte</p></a></div>
+          </div></li>
+      </div>
+    </div><div class="">
+      <div class=""><li class="is-marginless"><div
+            class="card"><div class="card-header is-single-link">
+      <a
+        href='/behandlungsdokumentation/behandlungsdokumentation/'
+        class='card-header-title'
+          title='Behandlungsdokumentation'>
+        <i class=''></i><p class="pt-0 pb-0 pr-2 pl-0">Behandlungsdokumentation</p></a></div>
+          </div></li>
+      </div>
+    </div></ul></li>
+      </div>
+    </div><div class="card is-fs-expandable-icon"><div class="card-header">
+      <a
+        href='/unterbringung/'
+        class='card-header-title'>
+        <i class='&lt;nil&gt; fa-lg'></i></a></div>
+      </div><div class="is-expandable">
+      <div class="is-sidebar-list-wrapper"><li class="is-marginless is-entries-expandable is-entries-shrinked"><div
+            class="card"><div class="card-header">
+      <a
+        href='/unterbringung/'
+        class='card-header-title'
+          title='Unterbringung'>
+        <i class='&lt;nil&gt; fa-lg'></i><p class="pt-0 pb-0 pr-2 pl-1">Unterbringung</p></a><a class="card-header-icon is-icon-expandable is-paddingless is-icon-shrinked">
+                <span class='icon'></span>
+              </a>
+            </div>
+          </div><ul class="is-marginless"><div class="">
+      <div class=""><li class="is-marginless"><div
+            class="card"><div class="card-header is-single-link">
+      <a
+        href='/unterbringung/unterbringung/'
+        class='card-header-title'
+          title='Unterbringung'>
+        <i class=''></i><p class="pt-0 pb-0 pr-2 pl-0">Unterbringung</p></a></div>
+          </div></li>
+      </div>
+    </div></ul></li>
+      </div>
+    </div></ul>
+      </aside>
+    </div>
+    <div id="sidebarCollapsible" class="is-marginless">
+      <div class="card is-uncollapse-action">
+        <div
+          id="sidebarUncollapse"
+          class="card-header is-single-link"
+          title="Collapse/Uncollapse sidebar"
+        >
+          <a class="card-header-title">
+            <i class="fa-solid fa-angles-right fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="card is-collapse-action">
+        <div
+          id="sidebarCollapse"
+          class="card-header is-single-link"
+          title="Collapse/Uncollapse sidebar"
+        >
+          <a class="card-header-title">
+            <i class="fa-solid fa-angles-left fa-lg"></i>
+            <p>Collapse sidebar</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="sidebarMobileWrapper" class="column is-narrow is-hidden-desktop"></div>
+<div class="columns is-mobile is-marginless is-scroll-smooth has-toc" id="contentContainer">
+  <div class="column" id="content"><div id="contentTitle">Entlassbrief_abschnitte</div>
+<h2 id='diagnosen'>Diagnosen<a href='#diagnosen' class='anchor'>#</a>
+</h2><p>Diagnosen (ICD-10)</p>
+<ul>
+<li>Hauptdiagnose zuerst mit ICD-10-Code</li>
+<li>Dann alle Nebendiagnosen, die für die aktuelle Behandlungsepisode relevant  sind (also diagnostische oder therapeutische Maßnahmen auslösen oder den Schweregrad der Erkrankung erhöhen) oder klinisch bedeutsam sind (z.B.  &ldquo;Penicillinallergie&rdquo;, &ldquo;Z.n. Pankreascarcinom 2006&rdquo;).</li>
+<li>In der  Bezeichnung der Diagnose bitte klinische Begriffe verwenden, nicht die  ICD-10-Kapitelüberschriften (also: „Alkoholabhängigkeit“ statt:  „Psychische und Verhaltensstörungen durch Alkohol:  Abhängigkeitssyndrom“; „Folsäuremangel“ statt: „Mangel an sonstigen  näher bezeichneten Vitaminen des Vitamin-B-Komplexes“ etc.).</li>
+<li>Bitte weglassen: mitgeschleppte Vordiagnosen, die weder klinisch noch  abrechnungstechnisch relevant sind, außerdem die meisten R-Diagnosen  (Ausnahme: R64: Kachexie bei BMI &lt; 18,5).</li>
+</ul>
+<h2 id='aufnahmemodus'>Aufnahmemodus<a href='#aufnahmemodus' class='anchor'>#</a>
+</h2><p>Zusammenfassung der wesentlichen Aufnahmeumstände: Name der Einweiserin / verlegendes  Krankenhaus / Einweisung durch Notarzt / notfallmäßige Aufnahme nach  Selbstvorstellung oder Zuweisung durch Rettungsdienst. Ggf.  Einweisungsdiagnose oder -anlass. Freiwilligkeit bzw. Rechtsgrundlage,  z.B. vorläufige Einweisung nach § 19 PsychKG LSA.</p>
+<p>Die Informationen aus dem Aufnahmemodus brauchen hier nicht  wiederholt werden. Typischerweise werden zunächst die subjektiven  Beschwerden des Patienten sowie wichtige fremdanamnestische Angaben  wiedergegeben. In der Regel wird die indirekte Rede benutzt, dabei  sollte immer klar sein, von wem jeweils die Informationen stammen.  Wörtliche Zitate können hilfreich sein, umfangreiche  Beschwerdeschilderungen sollten auf das Wesentliche zusammengefasst  werden. Angaben zum psychopathologischen Befund brauchen hier nicht  vorweggenommen werden, außer sie sind zum Verständnis notwendig.  Aktuelle Medikation. Vorhandensein von Betreuung, Vorsorgevollmacht und  Patientenverfügung (spezifizieren!).</p>
+<h2 id='weitere-psychiatrische-vorgeschichte'>Weitere psychiatrische Vorgeschichte<a href='#weitere-psychiatrische-vorgeschichte' class='anchor'>#</a>
+</h2><p>Zusammenfassung der psychischen Auffälligkeiten/Beschwerden, Vordiagnosen und  Behandlungen möglichst in chronologischer Reihenfolge.  Eine  Wiederholung der Angaben aus 4.2 ist nicht notwendig, auch braucht man  nicht immer eine vollständige Auflistung aller Vorbehandlungen mit  Aufnahme- und Entlassdaten sowie wörtlich zitierten Diagnosen. Hilfreich sind aber immer zeitliche Angaben zur Erstmanifestation.  Gefährdungsmomente in der Vorgeschichte sollten erwähnt oder auf ihr  Fehlen ausdrücklich hingewiesen werden. Hier ist auch der Platz für die  Familienanamnese.</p>
+<h2 id='substanzanamnese'>Substanzanamnese<a href='#substanzanamnese' class='anchor'>#</a>
+</h2><p>Hier werden wesentliche Angaben zum Substanzkonsum wiedergegeben, auch Abhängigkeitskriterien soweit noch nicht erwähnt.</p>
+<h2 id='somatische-anamnese'>Somatische Anamnese<a href='#somatische-anamnese' class='anchor'>#</a>
+</h2><p>Wichtige somatische Vorerkrankungen, auf die Diagnoseliste kann Bezug genommen werden. Impfstatus. Allergien.</p>
+<h2 id='soziobiographische-anamnese'>Soziobiographische Anamnese<a href='#soziobiographische-anamnese' class='anchor'>#</a>
+</h2><p>Bibliographische Angaben aufgeführt, soweit sie für die Erkrankung wesentlich sind (je  nach Krankheitsbild mehr oder weniger ausführlich). Zumindest sollten  Schul- und Berufsabschluss, aktueller Familienstand, Kinder,  Wohnsituation und beruflicher Status genannt werden.</p>
+<h2 id='psychopathologischer-befund'>Psychopathologischer Befund<a href='#psychopathologischer-befund' class='anchor'>#</a>
+</h2><p>Der ursprüngliche Befund muss auf Vollständigkeit und inhaltliche wie  sprachliche Korrektheit durchgesehen und ggf. ergänzt und präzisiert  werden.</p>
+<h2 id='neurologischer-befund'>Neurologischer Befund<a href='#neurologischer-befund' class='anchor'>#</a>
+</h2><p>Die Ausführlichkeit kann dem Störungsbild angepasst sein.</p>
+<h2 id='allgemeinklinischer-befund'>Allgemeinklinischer Befund<a href='#allgemeinklinischer-befund' class='anchor'>#</a>
+</h2><p>Überprüfen und ggf.  ergänzen (z.B. bei auffälligem Ernährungszustand oder sonstiger  klinischer Relevanz Körpergewicht, Körpergröße, BMI angeben).</p>
+<p>Bei Bedarf: Hier finden Sie einen <a
+  href="https://adipositas-gesellschaft.de/bmi/"
+    class="is-pretty-link">BMI-Rechner</a
+>
+.</p>
+<h2 id='labor-in-si-einheiten'>Labor (in SI-Einheiten)<a href='#labor-in-si-einheiten' class='anchor'>#</a>
+</h2><ul>
+<li>Hier alle relevanten Laborwerte, egal ob Routine oder nicht.</li>
+<li>Unauffällige Kontrollen können auch zusammenfassend berichtet werden.</li>
+</ul>
+<h2 id='ekg'>EKG<a href='#ekg' class='anchor'>#</a>
+</h2><ul>
+<li>Von der initialen EKG-Untersuchung sollten in jedem Fall der Lagetyp, das  Vorliegen eines Sinusrhythmus und die Frequenz explizit erwähnt werden.</li>
+<li>Unauffällige Kontrollen können auch zusammenfassend berichtet werden.</li>
+</ul>
+<h2 id='eeg'>EEG<a href='#eeg' class='anchor'>#</a>
+</h2><p>Soweit durchgeführt: Grundrhythmus mit Angabe der Frequenz, Auffälligkeiten.</p>
+<h2 id='radiologische-befunde'>Radiologische Befunde<a href='#radiologische-befunde' class='anchor'>#</a>
+</h2><ul>
+<li>Wichtig: konkrete beschriebene Auffälligkeiten wiedergeben</li>
+<li>Was weggelassen werden kann: Lange Auflistungen von unauffälligen Strukturen.</li>
+<li>Klinische Interpretation ggf. im Verlauf oder der zusammenfassenden Beurteilung</li>
+</ul>
+<h2 id='konsile'>Konsile<a href='#konsile' class='anchor'>#</a>
+</h2><ul>
+<li>Wichtig: Diagnosen, relevante Befunde, Empfehlungen an weiterbehandelnde Ärzte</li>
+<li>Was weggelassen werden kann: Organisatorische Mitteilungen ohne Relevanz für den Leser des Arztbriefes</li>
+</ul>
+<h2 id='sonstige-untersuchungen'>Sonstige Untersuchungen<a href='#sonstige-untersuchungen' class='anchor'>#</a>
+</h2><p>Hier ggf. weitere Untersuchungen, die in den übrigen Kategorien keinen Platz finden.</p>
+<h2 id='testpsychologischer-befund'>Testpsychologischer Befund<a href='#testpsychologischer-befund' class='anchor'>#</a>
+</h2><ul>
+<li>Wichtig: Verwendete Verfahren, wesentliche Befunde quantitativ (wenn möglich als Prozentrang, z-Wert o.ä.)</li>
+<li>Hier auch Mini-Mental-Status</li>
+<li>Klinische Interpretation nicht hier sondern ggf. im Verlauf oder der zusammenfassenden Beurteilung</li>
+</ul>
+<h2 id='behandlungsverlauf'>Behandlungsverlauf<a href='#behandlungsverlauf' class='anchor'>#</a>
+</h2><p>Hier sollte das Wesentliche zusammengefasst werden, insbesondere</p>
+<ul>
+<li>die verabreichten Medikamente (nicht jede Bedarfsmedikation), in der Regel  mit Maximaldosis und Dauer der Verabreichung (nicht jede Dosisänderung)</li>
+<li>psychotherapeutische Interventionen, ergo-, physio- und soziotherapeutische Maßnahmen und  andere Zusatztherapien, Teilnahme an Programmen wie QE und S4-Behandlung</li>
+<li>somatische Komplikationen und Begleiterkrankungen (Konsilinhalte und Zusatzbefunde nicht wiederholen, sondern darauf verweisen)</li>
+<li>Veränderungen und Entwicklungen in der Psychopathologie sollen in gestraffter Form  beschrieben werden, der bei Entlassung erreichte Zustand soll erkennbar  sein.</li>
+<li>rechtlich bedeutsame Fakten (Freiheitseinschränkende  Maßnahmen, Entlassung gegen ärztlichen Rat, Aufklärung über  Fahruntauglichkeit u.ä.); Freiwilligkeit des Aufenthaltes auf der  geschützten Station immer explizit erwähnen</li>
+</ul>
+<h2 id='zusammenfassende-beurteilung'>Zusammenfassende Beurteilung<a href='#zusammenfassende-beurteilung' class='anchor'>#</a>
+</h2><p>Hier findet sich die epikritische Bewertung, d.h.</p>
+<ul>
+<li>Begründung der Diagnose(n) ggf. differenzialdiagnostischen Überlegungen. Das kann  stark abgekürzt werden, wenn die Diagnose bei Voraufenthalten gesichert  wurde und keine neuen Aspekte vorliegen. Wenn wir von (eigenen oder  fremden) früheren diagnostischen Einschätzung entscheidend abweichen,  sollten wir dies aber immer ausdrücklich begründen.</li>
+<li>Kurze zusammenfassende Würdigung des Behandlungsergebnisses</li>
+</ul>
+<h2 id='empfehlungen'>Empfehlungen<a href='#empfehlungen' class='anchor'>#</a>
+</h2><ul>
+<li>Mit dem Pat. vereinbarte Weiterbehandlung, ggf. bereits feststehenden Termine</li>
+<li>Inhaltliche Vorschläge für die Weiterbehandlung, ggf. expliziter Hinweis auf noch  ausstehende Diagnostik, Notwendigkeit weiterer Verlaufsbeobachtung etc.</li>
+<li>Ggf. die Bitte, die Indikation für die Fortführung einer Medikation oder andere Maßnahmen im Verlauf zu überprüfen</li>
+<li>Empfehlungen praxisnah halten, Fachkompetenz der Weiterbehandelnden berücksichtigen</li>
+<li>Wichtige Empfehlungen an den Patienten können hier dokumentiert werden.</li>
+<li>Ggf. hier auch durchgeführtes Entlassmanagement erwähnen (z.B. mitgegebenes Entlassrezept etc.)</li>
+</ul>
+<h2 id='medikation-bei-entlassung'>Medikation bei Entlassung<a href='#medikation-bei-entlassung' class='anchor'>#</a>
+</h2><ul>
+<li>Vollständige Angabe der weiter zu verordnenden Medikamenten (Freiname, Handelsname, Dosierung, Einnahmeschema)</li>
+<li>Die Auswahlliste im Orbis kann verwendet werden, sie gibt die aktuelle Apothekenliste wieder.</li>
+<li>Ggf. für die Weiterverordnung relevante Zusatzinformationen (z.B. Datum der letzten Injektion bei Depotpräparaten).</li>
+</ul>
+<h2 id='unterschriften'>Unterschriften<a href='#unterschriften' class='anchor'>#</a>
+</h2><p>Der Behandlungsbericht wird vom behandelnden Arzt/Psychologen, vom Oberarzt und vom Chefarzt vidiert. Beim vorläufigen Behandlungsbericht nur vom  behandelnden Arzt/Psychologen.</p>
+</div><div class="column is-sticky is-paddingless" id="tocWrapper">
+  <div class="is-paddingless" id="tocContainer">
+    <div class="toc-header">
+      <h6 class="toc-title is-marginless">On this page:</h6>
+      <i
+        title="Back to top"
+        id="tocBackToTop"
+        class="fa-solid fa-circle-arrow-up"
+      ></i>
+    </div>
+    <div id="tocContent">
+      <div id="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#diagnosen">Diagnosen</a></li>
+    <li><a href="#aufnahmemodus">Aufnahmemodus</a></li>
+    <li><a href="#weitere-psychiatrische-vorgeschichte">Weitere psychiatrische Vorgeschichte</a></li>
+    <li><a href="#substanzanamnese">Substanzanamnese</a></li>
+    <li><a href="#somatische-anamnese">Somatische Anamnese</a></li>
+    <li><a href="#soziobiographische-anamnese">Soziobiographische Anamnese</a></li>
+    <li><a href="#psychopathologischer-befund">Psychopathologischer Befund</a></li>
+    <li><a href="#neurologischer-befund">Neurologischer Befund</a></li>
+    <li><a href="#allgemeinklinischer-befund">Allgemeinklinischer Befund</a></li>
+    <li><a href="#labor-in-si-einheiten">Labor (in SI-Einheiten)</a></li>
+    <li><a href="#ekg">EKG</a></li>
+    <li><a href="#eeg">EEG</a></li>
+    <li><a href="#radiologische-befunde">Radiologische Befunde</a></li>
+    <li><a href="#konsile">Konsile</a></li>
+    <li><a href="#sonstige-untersuchungen">Sonstige Untersuchungen</a></li>
+    <li><a href="#testpsychologischer-befund">Testpsychologischer Befund</a></li>
+    <li><a href="#behandlungsverlauf">Behandlungsverlauf</a></li>
+    <li><a href="#zusammenfassende-beurteilung">Zusammenfassende Beurteilung</a></li>
+    <li><a href="#empfehlungen">Empfehlungen</a></li>
+    <li><a href="#medikation-bei-entlassung">Medikation bei Entlassung</a></li>
+    <li><a href="#unterschriften">Unterschriften</a></li>
+  </ul>
+</nav></div>
+      <div id="taxonomies"><div class="taxonomy-wrapper"></div><div class="taxonomy-wrapper"></div></div>
+    </div>
+  </div>
+  <div
+    class="is-paddingless"
+    id="tocCollapsible"
+    title="Collapse/Uncollapse table of contents"
+  >
+    <i class="fa-solid fa-angles-right fa-lg"></i>
+  </div>
+</div>
+</div>
+</div><script type='text/javascript'>
+  const baseUrl = 'https:\/\/example.org\/';
+  const codeCopyBefore = 'Copy to clipboard';
+  const codeCopyAfter = 'Copied to clipboard';
+  const svgDownloadLabel = 'Download as SVG';
+  const helperLoadingLabel = 'Loading';
+  const searchNoResults = 'No result found';
+  const introNextLabel = 'Next';
+  const introPrevLabel = 'Previous';
+  const introSkipLabel = '✗';
+  const introDoneLabel = 'Done';
+  const printLabel = 'Print current page';
+  const qrCodeLabel = 'Show current page QR code';
+  const naCommonLabel = 'Not available';
+</script>
+<script
+      type="module"
+      src="/js/theme/modules/const.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/modules/helpers.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/modules/helpersGlobal.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/init.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/navbar.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/print.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/qrcode.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/search.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/shortcuts.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/sidebar.min.js"
+    ></script><script
+      type="module"
+      src="/js/theme/toc.min.js"
+    ></script><script
+      type="text/javascript"
+      src="/js/theme/browserCompatibility.min.js"
+    ></script><script
+      type="text/javascript"
+      src="/js/external/flexsearch/flexsearch.bundle.min.js"
+    ></script><script
+      type="text/javascript"
+      src="/js/external/qrious/qrious.min.js"
+    ></script><script
+      type="text/javascript"
+      src="/js/external/overlay-scrollbars/overlayscrollbars.min.js"
+    ></script>
+</body>
+</html>

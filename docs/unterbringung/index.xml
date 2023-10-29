@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unterbringung on My New Hugo Site</title>
+    <link>https://example.org/unterbringung/</link>
+    <description>Recent content in Unterbringung on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Oct 2023 09:04:53 +0100</lastBuildDate><atom:link href="https://example.org/unterbringung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unterbringung</title>
+      <link>https://example.org/unterbringung/unterbringung/</link>
+      <pubDate>Sun, 29 Oct 2023 09:08:42 +0100</pubDate>
+      
+      <guid>https://example.org/unterbringung/unterbringung/</guid>
+      <description>Zum Vorgehen bei der Unterbringung nach PsychKG und anderen freihheitsentziehenden Maßnahmen finden sich im Intralean eine Verfahrensanweisung und damit verbundene interne Formblätter und Dokumente, z.B.:
+@@.my-intralean-class
+VA QM.397.0-3 Freiheitsentziehende Maßnahmen SD QM.397.5-4 Information zu freiheitsentziehenden Maßnahmen FB QM.393.7-0 Anordnung und Dokumentation freiheitsentziehender Maßnahmen FB QM.397.8-0 Anordnung und Dokumentation besonderer Sicherungsmaßnahmen nach § 26 PsychKG LSA FB.QM.397.10-0 PsychKG Aufklärung Rechte/Behandlungsplan @@ Weitere Word-Vorlagen sind über Links auf dieser Seite zugänglich.
+!!! Unterbringung nach PsychKG</description>
+    </item>
+    
+  </channel>
+</rss>

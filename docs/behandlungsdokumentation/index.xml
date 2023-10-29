@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Behandlungsdokumentation on My New Hugo Site</title>
+    <link>https://example.org/behandlungsdokumentation/</link>
+    <description>Recent content in Behandlungsdokumentation on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Oct 2023 09:04:53 +0100</lastBuildDate><atom:link href="https://example.org/behandlungsdokumentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entlassbrief_abschnitte</title>
+      <link>https://example.org/behandlungsdokumentation/entlassbrief_abschnitte/</link>
+      <pubDate>Sun, 29 Oct 2023 09:07:54 +0100</pubDate>
+      
+      <guid>https://example.org/behandlungsdokumentation/entlassbrief_abschnitte/</guid>
+      <description>Diagnosen#Diagnosen (ICD-10)
+Hauptdiagnose zuerst mit ICD-10-Code Dann alle Nebendiagnosen, die für die aktuelle Behandlungsepisode relevant sind (also diagnostische oder therapeutische Maßnahmen auslösen oder den Schweregrad der Erkrankung erhöhen) oder klinisch bedeutsam sind (z.B. &amp;ldquo;Penicillinallergie&amp;rdquo;, &amp;ldquo;Z.n. Pankreascarcinom 2006&amp;rdquo;). In der Bezeichnung der Diagnose bitte klinische Begriffe verwenden, nicht die ICD-10-Kapitelüberschriften (also: „Alkoholabhängigkeit“ statt: „Psychische und Verhaltensstörungen durch Alkohol: Abhängigkeitssyndrom“; „Folsäuremangel“ statt: „Mangel an sonstigen näher bezeichneten Vitaminen des Vitamin-B-Komplexes“ etc.). Bitte weglassen: mitgeschleppte Vordiagnosen, die weder klinisch noch abrechnungstechnisch relevant sind, außerdem die meisten R-Diagnosen (Ausnahme: R64: Kachexie bei BMI &amp;lt; 18,5).</description>
+    </item>
+    
+    <item>
+      <title>Behandlungsdokumentation</title>
+      <link>https://example.org/behandlungsdokumentation/behandlungsdokumentation/</link>
+      <pubDate>Sun, 29 Oct 2023 09:06:23 +0100</pubDate>
+      
+      <guid>https://example.org/behandlungsdokumentation/behandlungsdokumentation/</guid>
+      <description>Ein strukturiertes Vorgehen fördert effizientes Arbeiten und verbessert das Zusammenspiel mit nachfolgenden Behandlern und Controlling.
+!!Aufnahmestatus
+Bei Aufnahme Status anlegen, ggf. Diktatfunktion nutzen. Wenn Status komplett incl. Behandlungsplan bitte vidieren.#In den ersten Tagen kann der Aufnahmestatus um neue Informationen ergänzt werden. Wenn nötig mit Kopieren Kontextfall neue Version erstellen.#!!Verlauf Der ärztliche Verlauf wird derzeit noch handschriftlich dokumentiert. Besonders wichtig ist die Dokumentation von Änderungen im psychopathologischen Befund, Veränderungen der diagnostischen Einschätzung oder der Therapie mit Begründung, Feststellungen zu (fehlenden) Gefährdungsmomenten und erfolgte Aufklärungen.</description>
+    </item>
+    
+  </channel>
+</rss>
